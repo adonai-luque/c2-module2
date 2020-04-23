@@ -13,8 +13,8 @@ people_orders = {
 }
 
 def process_orders(people_orders)
-  dishes_count = Hash.new
-  people_orders.values.uniq.each { |d| dishes_count[d] = people_orders.values.count(d) }
+  dishes_count = Hash.new(0)
+  people_orders.values.each { |d| dishes_count[d] += 1 }
   return dishes_count
 end
     
