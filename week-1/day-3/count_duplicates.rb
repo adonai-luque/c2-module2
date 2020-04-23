@@ -1,8 +1,8 @@
 def count_duplicates(numbers)
   duplicates = 0
-  numbers.sort!
+  sorted = numbers.sort
   for i in (1...numbers.size) do
-    if numbers[i] == numbers[i-1]
+    if sorted[i] == sorted[i-1]
       duplicates += 1
     end
   end
